@@ -4,11 +4,6 @@ const Employee = require('../models/Employee');
 
 // Add functions for CRUD operations using Sequelize models
 
-const Department = require('../models/Department');
-const Role = require('../models/Role');
-const Employee = require('../models/Employee');
-
-// Department CRUD operations
 
 async function getAllDepartments() {
   try {
@@ -28,7 +23,6 @@ async function createDepartment(departmentData) {
   }
 }
 
-// Repeat similar functions for updating and deleting departments
 
 // Role CRUD operations
 
@@ -50,7 +44,7 @@ async function createRole(roleData) {
   }
 }
 
-// Repeat similar functions for updating and deleting roles
+
 
 // Employee CRUD operations
 
@@ -74,11 +68,39 @@ async function createEmployee(employeeData) {
 
 // Repeat similar functions for updating and deleting employees
 
-module.exports = {
-  getAllDepartments,
-  createDepartment,
-  getAllRoles,
-  createRole,
-  getAllEmployees,
-  createEmployee,
-};
+async function updateEmployee(employeeId, updatedData) {
+    try {
+      const result = await Employee.update(updatedData, {
+        where: {
+          id: employeeId,
+        },
+      });
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
+  
+  async function deleteEmployee(employeeId) {
+    try {
+      const result = await Employee.destroy({
+        where: {
+          id: employeeId,
+        },
+      });
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
+  
+  module.exports = {
+    getAllDepartments,
+    createDepartment,
+    getAllRoles,
+    createRole,
+    getAllEmployees,
+    createEmployee,
+    updateEmployee,
+    deleteEmployee,
+  };

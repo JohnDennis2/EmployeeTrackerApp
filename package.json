@@ -1,13 +1,13 @@
 {
-    "name": "your-project-name",
+    "name": "employee-tracker-app",
     "version": "1.0.0",
-    "description": "Your project description",
+    "description": "Tracks employees, departments, and roles",
     "main": "index.js",
     "scripts": {
       "start": "node index.js"
     },
     "dependencies": {
       "inquirer": "^8.2.4",
-      "mysql2": "^x.x.x",  
-      "sequelize": "^x.x.x" 
+      "mysql2": "3.9.1",  
+      "sequelize": "2.3.3" 
     }
