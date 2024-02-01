@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const dbFunctions = require('./utils/queries'); 
+const queries = require('./utils/queries'); 
 
 // Main menu
 const mainMenu = async () => {
@@ -22,15 +22,26 @@ const mainMenu = async () => {
 
   switch (choice) {
     case 'View all departments':
-      // Call the function to view all departments
+        getAllDepartments()
       break;
     case 'View all roles':
-      // Call the function to view all roles
+        getAllRoles()
       break;
     case 'View all employees':
-      // Call the function to view all employees
+        getAllEmployees()
       break;
-    // Add cases for other options
+    
+    case 'Add a department':
+        createDepartment()
+      break;
+    case 'Add a role':
+        createRole()
+      break;
+    case 'Add an employee':
+        createEmployee()
+      
+      break;
+    
     case 'Exit':
       process.exit(0); // Exit the application
     default:

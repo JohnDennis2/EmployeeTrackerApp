@@ -2,7 +2,8 @@
     "name": "employee-tracker-app",
     "version": "1.0.0",
     "description": "Tracks employees, departments, and roles",
-    "main": "index.js",
+    "main": "server.js",
+}
     "scripts": {
       "start": "node index.js"
     },
