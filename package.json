@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "description": "Tracks employees, departments, and roles",
     "main": "server.js",
-}
+
     "scripts": {
       "start": "node index.js"
     },
     "dependencies": {
       "inquirer": "^8.2.4",
-      "mysql2": "3.9.1",  
-      "sequelize": "2.3.3" 
+      "mysql2": "3.9.1"
     }
+}
